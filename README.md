@@ -2,7 +2,7 @@
 Zuzanna Leszczyńska, Olga Bońdos
 
 #Opis:
-Nasz projekt obejmuje wytrenowanie i porównanie modeli rozpoznających czy roślina jest zdrowa lub chora, planujemy wykorzystać go w naszym projekcie inżynierskim SmartGreenhouse.
+Nasz projekt obejmuje wytrenowanie, użycie na stronie internetowej oraz porównanie modeli rozpoznających czy roślina jest zdrowa lub chora. Planujemy wykorzystać go w naszym projekcie inżynierskim SmartGreenhouse.
 
 #Dane:
 Użyłyśmy datasetu pobranego z Kaggle. Składa się on z 87 tysięcy zdjęć roślin oznaczonych jako healthy lub na co są chore. Początkowo dataset składał się z folderów podzielonych na rośliny o różnych chorobach, jednak uprościliśmy go na rośliny chore i zdrowe, a następnie użyłyśmy labeli 1 lub 0 dla zdrowych i chorych roślin.
