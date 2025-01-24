@@ -47,6 +47,7 @@ def predict():
         # Zapisz przesłane zdjęcie
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(filepath)
+        uploaded_image_url = url_for('static', filename=f'uploads/{file.filename}')
 
         # Otwórz obraz i przetwórz
         img = Image.open(filepath).convert('RGB')
@@ -56,9 +57,10 @@ def predict():
         with torch.no_grad():
             output = model(img)
             _, predicted = torch.max(output, 1)
-            prediction = 'Zdrowa (1)' if predicted.item() == 0 else 'Chora (0)'
+            prediction = 'Zdrowa (1)' if predicted.item() == 1 else 'Chora (0)'
 
-        return f"<h1>Wynik: {prediction}</h1><br><img src='/{filepath}' width='300'>"
+        return render_template('index.html', result=prediction, uploaded_image_url=uploaded_image_url)
+       # return f"<h1>Wynik: {prediction}</h1><br><img src='/{filepath}' width='300'>"
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,9 +1,9 @@
 body {
     font-family: 'Poppins', sans-serif;
+    display: flex;
     background: linear-gradient(to bottom, #d9f99d, #a7f3d0);
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -12,25 +12,29 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    text-align: center;
-    color: #065f46;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px #34d399;
+    flex-direction: column;
+    color: #3bb459;
+    margin-bottom: 300px;
+    text-shadow: 2px 2px 4px #81cb56;
 }
 
 form {
-    background: #f0fdf4;
+    display: flex;
+    flex-direction: column; /* Układ pionowy */
+    align-items: center;
+    justify-content: center;
+    width: 300px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border: 2px solid #6ee7b7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-label {
-    font-size: 1.2rem;
+form label {
     margin-bottom: 10px;
-    display: block;
+    font-size: 1.1rem;
+    color: #2d6a4f;
+    font-weight: bold;
 }
 
 input[type="file"] {
@@ -66,11 +70,11 @@ button:active {
 }
 
 input[type="file"]:hover {
-    background-color: #a7f3d0;
+    background-color: #7cef98;
 }
 
 input[type="file"]:active {
-    background-color: #6ee7b7;
+    background-color: #bfe8d8;
 }
 
 footer {
@@ -95,8 +99,23 @@ input[type="file"] {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #10b981;
-    background-color: #d1fae5;
+    background-color: #c5f6d1;
     cursor: pointer;
     color: #065f46;
     animation: glow 1.5s infinite;
+}
+form button {
+    background-color: #7cef98;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 50%;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2d6a4f;
 }

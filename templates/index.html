@@ -9,9 +9,18 @@
 <body>
     <h1>Sprawdź zdrowie rośliny</h1>
     <form action="/predict" method="POST" enctype="multipart/form-data">
-        <label for="image">Prześlij zdjęcie rośliny:</label>
         <input type="file" id="image" name="image" accept="image/*" required>
         <button type="submit">Przeanalizuj</button>
     </form>
+  <!-- Wynik analizy -->
+    {% if result %}
+        <div class="result">
+            <h2>Wynik analizy:</h2>
+            <p>{{ result }}</p>
+            {% if uploaded_image_url %}
+                <img src="{{ uploaded_image_url }}" alt="Przesłane zdjęcie" style="max-width: 300px; margin-top: 20px;">
+            {% endif %}
+        </div>
+    {% endif %}
 </body>
 </html>
