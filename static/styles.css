@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #d9f99d, #a7f3d0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #065f46;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #065f46;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #34d399;
+}
+
+form {
+    background: #f0fdf4;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #6ee7b7;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #10b981;
+    background-color: #d1fae5;
+    cursor: pointer;
+    color: #065f46;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #34d399;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #059669;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+input[type="file"]:hover {
+    background-color: #a7f3d0;
+}
+
+input[type="file"]:active {
+    background-color: #6ee7b7;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #065f46;
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #34d399;
+    }
+    50% {
+        box-shadow: 0 0 15px #34d399;
+    }
+    100% {
+        box-shadow: 0 0 5px #34d399;
+    }
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #10b981;
+    background-color: #d1fae5;
+    cursor: pointer;
+    color: #065f46;
+    animation: glow 1.5s infinite;
+}
