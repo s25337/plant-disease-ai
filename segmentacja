@@ -1,0 +1,5 @@
+mask = transforms.Compose([
+    # other transforms
+    transforms.ToTensor(),
+    lambda x: x*255
+])(mask).squeeze()
